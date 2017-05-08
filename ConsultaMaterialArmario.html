@@ -1,102 +1,16 @@
 <html>
 
 <head>
-  <script>
-    /**
-    *   I don't recommend using this plugin on large tables, I just wrote it to make the demo useable. It will work fine for smaller tables 
-    *   but will likely encounter performance issues on larger tables.
-    *
-    *		<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
-    *		$(input-element).filterTable()
-    *		
-    *	The important attributes are 'data-action="filter"' and 'data-filters="#table-selector"'
-    */
-    (function(){
-        'use strict';
-      var $ = jQuery;
-      $.fn.extend({
-        filterTable: function(){
-          return this.each(function(){
-            $(this).on('keyup', function(e){
-              $('.filterTable_no_results').remove();
-              var $this = $(this), 
-                            search = $this.val().toLowerCase(), 
-                            target = $this.attr('data-filters'), 
-                            $target = $(target), 
-                            $rows = $target.find('tbody tr');
-
-              if(search == '') {
-                $rows.show(); 
-              } else {
-                $rows.each(function(){
-                  var $this = $(this);
-                  $this.text().toLowerCase().indexOf(search) === -1 ? $this.hide() : $this.show();
-                })
-                if($target.find('tbody tr:visible').size() === 0) {
-                  var col_count = $target.find('tr').first().find('td').size();
-                  var no_results = $('<tr class="filterTable_no_results"><td colspan="'+col_count+'">No results found</td></tr>')
-                  $target.find('tbody').append(no_results);
-                }
-              }
-            });
-          });
-        }
-      });
-      $('[data-action="filter"]').filterTable();
-    })(jQuery);
-
-    $(function(){
-        // attach table filter plugin to inputs
-      $('[data-action="filter"]').filterTable();
-
-      $('.container').on('click', '.panel-heading span.filter', function(e){
-        var $this = $(this), 
-          $panel = $this.parents('.panel');
-
-        $panel.find('.panel-body').slideToggle();
-        if($this.css('display') != 'none') {
-          $panel.find('.panel-body input').focus();
-        }
-      });
-      $('[data-toggle="tooltip"]').tooltip();
-    })
-  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css">
-  <style>
-    row {
-      margin-top: 40px;
-      padding: 0 10px;
-    }
-
-    clickable {
-      cursor: pointer;
-    }
-
-    panel-heading div {
-      margin-top: -18px;
-      font-size: 15px;
-    }
-
-    panel-heading div span {
-      margin-left: 5px;
-    }
-
-    panel-body {
-      display: none;
-    }
-
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-  </style>
-</head>
+  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css"> </head>
 
 <body>
   <nav class="navbar navbar-expand-md bg-faded navbar-light">
     <div class="container"> <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item"> <a class="nav-link" href="/OscaArmarios/Home.html">Home <span class="sr-only">(current)</span></a> </li>
@@ -116,55 +30,38 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="my-3">Consulta Material Armario</h1>
+          <h1 class="my-3">Seleccionar Pedido Venta</h1>
         </div>
       </div>
-      <div class="col-md-11">
+      <div class="container">
         <div class="row">
-          <div class="col-md-11">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <div class="pull-right"> <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
-								<i class="glyphicon glyphicon-filter"></i>
-							</span> </div>
-              </div>
-              <div class="panel-body"> <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers"> </div>
-              <table class="table table-hover" id="dev-table">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Kilgore</td>
-                    <td>Trout</td>
-                    <td>kilgore</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Bob</td>
-                    <td>Loblaw</td>
-                    <td>boblahblah</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Holden</td>
-                    <td>Caulfield</td>
-                    <td>penceyreject</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-          <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+          <div class="col-md-12"> </div>
         </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <form>
+            <div class="form-group"> <label class="Lead">Código pedido <input type="text" class="form-control"></label> </div>
+            <div class="form-group"> <label class="Lead">Proveedor  <input type="text" class="form-control"></label> </div> <a class="btn btn-primary" href="#myModal" data-toggle="modal">Buscar</a> </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="label">Title</h4>
+        </div>
+        <div class="modal-body"> Body </div>
+        <div class="modal-footer"> <a class="btn btn-default" data-dismiss="modal">Close</a> </div>
       </div>
     </div>
   </div>

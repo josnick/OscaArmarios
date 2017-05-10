@@ -4,40 +4,104 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css"> </head>
+  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css">
+  <link type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
 <body>
-  <nav class="navbar navbar-expand-md bg-faded navbar-light">
+  <nav class="navbar navbar-expand-md bg-faded navbar-light w-100">
     <div class="container"> <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <span class="navbar-toggler-icon"></span>
+    </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto w-100">
           <li class="nav-item"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Entrada</a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="#">Entrada</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#">Salida</a> </li>
-          <li class="nav-item active"> <a class="nav-link" href="#">Consulta</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Consulta</a> </li>
+          <div class=" w-100">
+            <form class="form-inline pull-right w-50"> <input class="form-control mr-sm-2" type="text" placeholder="Search"> <button class="btn pull-right btn-outline-success" type="submit">Buscar</button>
+              <div class="btn-group mx-4"> <button class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown"> Dropdown </button>
+                <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a>
+                  <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
+              </div>
+            </form>
+          </div>
         </ul>
-        <form class="form-inline my-2 my-lg-0"> <input class="form-control mr-sm-2" type="text" placeholder="Search"> <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> </form>
-        <div class="btn-group mx-4"> <button class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown"> Dropdown </button>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a>
-            <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
-        </div>
       </div>
     </div>
   </nav>
   <div class="py-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-4"><a href="#" class="btn btn-primary btn-lg btn-block" data-toggle="">Artículo</a></div>
-        <div class="col-md-4"><a href="#" class="btn btn-primary btn-lg btn-block" data-toggle="">Entablado</a></div>
-        <div class="col-md-4"><a href="#" class="btn btn-primary btn-lg btn-block" data-toggle="">Armario</a></div>
+        <div class="col-md-12">
+          <h1 class="my-3">Seleccionar pedido</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"> </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <form>
+            <div class="form-group"> <label class="Lead">Código pedido<input type="text" class="form-control"></label> </div>
+            <div class="form-group"> <label class="Lead">Proveedor <input type="text" class="form-control"></label> </div> <a class="btn btn-primary" href="#myModal" data-toggle="modal">Buscar</a> </form>
+        </div>
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-  <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+  <!--Diagolo muestra todos los articulos -->
+  <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="label">Pedidos</h4>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-12">
+            <div class="panel panel-primary">
+              <table class="table table-hover" id="dev-table">
+                <thead>
+                  <tr>
+                    <th class="text-center">Código</th>
+                    <th class="text-center">Proveedor</th>
+                    <th class="text-center">Fecha</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="cursor: pointer" class="clickable-row" data-href="/OscaArmarios/EntradaSeleccionArticulo.html">
+                    <td class="text-center">4.064</td>
+                    <td class="text-center">Seaside Steel</td>
+                    <td class="text-center">08/05/2017</td>
+                  </tr>
+                  <tr style="cursor: pointer" class="clickable-row" data-href="/OscaArmarios/EntradaSeleccionArticulo.html">
+                    <td class="text-center">4.065</td>
+                    <td class="text-center">Seaside Steel</td>
+                    <td class="text-center">08/05/2017</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer"> <a class="btn btn-primary" href="#myModal" data-dismiss="modal">Cerrar</a> </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    jQuery(document).ready(function($) {
+        $(".clickable-row").click(function() {
+            window.document.location = $(this).data("href");
+        });
+    });
+  </script>
 </body>
 
 </html>

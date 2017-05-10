@@ -47,8 +47,54 @@
         <div class="col-md-12">
           <form>
             <div class="form-group"> <label class="Lead">Código Orden<input type="text" class="form-control"></label> </div>
-            <div class="form-group"> <label class="Lead">Artículo <input type="text" class="form-control"></label> </div> <button type="submit" class="btn">Buscar</button> </form>
+            <div class="form-group"> <label class="Lead">Artículo <input type="text" class="form-control"></label> </div> <a class="btn btn-primary" href="#myModal" data-toggle="modal">Buscar</a> </form>
         </div>
+      </div>
+    </div>
+  </div>
+  <!--Diagolo muestra todos los articulos -->
+  <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="label">Ordenes de producción</h4>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <div class="pull-right"> <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                     						 <i class="glyphicon glyphicon-filter"></i>
+                                  </span> </div>
+              </div>
+              <table class="table table-hover" id="dev-table">
+                <thead>
+                  <tr>
+                    <th class="text-center">Código</th>
+                    <th class="text-center">Referencia</th>
+                    <th class="text-center">Cliente</th>
+                    <th class="text-center">Fecha</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">4.064</td>
+                    <td class="text-center">Seaside Steel</td>
+                    <td class="text-center">EATON</td>
+                    <td class="text-center">08/05/2017</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">4.065</td>
+                    <td class="text-center">Seaside Steel</td>
+                    <td class="text-center">EATON</td>
+                    <td class="text-center">08/05/2017</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer"> <a class="btn btn-primary" href="#myModal" data-dismiss="modal">Cerrar</a> </div>
       </div>
     </div>
   </div>

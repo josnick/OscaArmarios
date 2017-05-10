@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css"> </head>
+  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet"> </head>
 
 <body>
   <nav class="navbar navbar-expand-md bg-faded navbar-light">
@@ -27,6 +29,73 @@
     </div>
   </nav>
   <div class="py-5">
+    <div class="container w-75">
+      <div class="row">
+        <div class="col-md-11 text-center mx-5 align-self-start col-xl-12">
+          <div class="modal-header">
+            <h4 class="modal-title" id="label">Seleccionar artículo de pedido</h4>
+          </div>
+          <div class="row col-md-6 col-md-offset-2 custyle text-center col-xl-12 align-self-center">
+            <table class="table table-striped custab">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>Parent ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>News</td>
+                  <td>News Cate</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="row">
+              <div class="panel panel-primary filterable">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Articulos</h3>
+                  <div class="pull-right"> <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button> </div>
+                </div>
+                <table class="table">
+                  <thead>
+                    <tr class="filters">
+                      <th><input type="text" class="form-control" placeholder="#" disabled=""></th>
+                      <th><input type="text" class="form-control" placeholder="First Name" disabled=""></th>
+                      <th><input type="text" class="form-control" placeholder="Last Name" disabled=""></th>
+                      <th><input type="text" class="form-control" placeholder="Username" disabled=""></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
     <div class="container">
       <div class="container">
         <div class="row">
@@ -34,73 +103,12 @@
         </div>
       </div>
     </div>
-    <div class="row text-center mx-5 w-100">
-      <div class="col-md-12 text-center mx-5">
-        <div class="modal-header">
-          <h4 class="modal-title" id="label">Seleccionar artículo de pedido</h4>
-        </div>
-        <div class="row col-md-6 col-md-offset-2 custyle text-center col-xl-12 align-self-center">
-          <table class="table table-striped custab">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Parent ID</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>News</td>
-                <td>News Cate</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="row">
-            <div class="panel panel-primary filterable">
-              <div class="panel-heading">
-                <h3 class="panel-title">Articulos</h3>
-                <div class="pull-right"> <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button> </div>
-              </div>
-              <table class="table">
-                <thead>
-                  <tr class="filters">
-                    <th><input type="text" class="form-control" placeholder="#" disabled=""></th>
-                    <th><input type="text" class="form-control" placeholder="First Name" disabled=""></th>
-                    <th><input type="text" class="form-control" placeholder="Last Name" disabled=""></th>
-                    <th><input type="text" class="form-control" placeholder="Username" disabled=""></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="row text-center mx-5 w-100"> </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
   <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>

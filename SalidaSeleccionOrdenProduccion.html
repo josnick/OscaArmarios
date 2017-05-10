@@ -38,75 +38,63 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 text-center">
         <div class="modal-header">
           <h4 class="modal-title" id="label">Seleccionar artículo de pedido</h4>
         </div>
-        <div class="modal-body">
-          <div class="col-md-12">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <div class="pull-right"> <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
-                     						 <i class="glyphicon glyphicon-filter"></i>
-                                  </span> </div>
-              </div>
-              <table class="table table-hover" id="dev-table">
-                <thead>
-                  <tr>
-                    <th class="text-center">Código pedido</th>
-                    <th class="text-center">Proveedor</th>
-                    <th class="text-center">Fecha</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="text-center">4.064</td>
-                    <td class="text-center">Global Supply</td>
-                    <td class="text-center">08/05/2017</td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">4.065</td>
-                    <td class="text-center">Global Supply</td>
-                    <td class="text-center">08/05/2017</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <div class="pull-right"> <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
-                     						 <i class="glyphicon glyphicon-filter"></i>
-                                  </span> </div>
-              </div>
-              <table class="table table-hover" id="dev-table">
-                <thead>
-                  <tr>
-                    <th class="text-center">Código pedido</th>
-                    <th class="text-center">Proveedor</th>
-                    <th class="text-center">Fecha</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="text-center">4.064</td>
-                    <td class="text-center">Global Supply</td>
-                    <td class="text-center">08/05/2017</td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">4.065</td>
-                    <td class="text-center">Global Supply</td>
-                    <td class="text-center">08/05/2017</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+        <div class="row col-md-11 col-md-offset-2 custyle text-center">
+          <table class="table table-striped custab">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Parent ID</th>
+                <th class="text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>News</td>
+                <td>News Cate</td>
+                <td class="text-center"><a class="btn btn-info btn-xs" href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="modal-footer"> <a class="btn btn-primary" href="#myModal" data-dismiss="modal">Cerrar</a> </div>
+      </div>
+      <div class="col-md-12 my-0">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <div class="pull-right"> <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                     						 <i class="glyphicon glyphicon-filter"></i>
+                                  </span> </div>
+          </div>
+          <table class="table table-hover" id="dev-table">
+            <thead>
+              <tr>
+                <th class="text-center">Código pedido</th>
+                <th class="text-center">Proveedor</th>
+                <th class="text-center">Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">4.064</td>
+                <td class="text-center">Global Supply</td>
+                <td class="text-center">08/05/2017</td>
+              </tr>
+              <tr>
+                <td class="text-center">4.065</td>
+                <td class="text-center">Global Supply</td>
+                <td class="text-center">08/05/2017</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
+    <div class="modal-footer"> <a class="btn btn-primary" href="#myModal" data-dismiss="modal">Cerrar</a> </div>
   </div>
   <div class="container"> </div>
 </body>

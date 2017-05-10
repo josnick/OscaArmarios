@@ -28,11 +28,6 @@
   </nav>
   <div class="py-5">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="my-3">Desvincular ubicaciones</h1>
-        </div>
-      </div>
       <div class="container">
         <div class="row">
           <div class="col-md-12"> </div>
@@ -45,7 +40,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="modal-header">
-          <h4 class="modal-title" id="label">Ordenes de producción</h4>
+          <h4 class="modal-title" id="label">Seleccionar artículo de pedido</h4>
         </div>
         <div class="modal-body">
           <div class="col-md-12">
@@ -58,23 +53,50 @@
               <table class="table table-hover" id="dev-table">
                 <thead>
                   <tr>
-                    <th class="text-center">Código</th>
-                    <th class="text-center">Referencia</th>
-                    <th class="text-center">Cliente</th>
+                    <th class="text-center">Código pedido</th>
+                    <th class="text-center">Proveedor</th>
                     <th class="text-center">Fecha</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="text-center">4.064</td>
-                    <td class="text-center">Seaside Steel</td>
-                    <td class="text-center">EATON</td>
+                    <td class="text-center">Global Supply</td>
                     <td class="text-center">08/05/2017</td>
                   </tr>
                   <tr>
                     <td class="text-center">4.065</td>
-                    <td class="text-center">Seaside Steel</td>
-                    <td class="text-center">EATON</td>
+                    <td class="text-center">Global Supply</td>
+                    <td class="text-center">08/05/2017</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <div class="pull-right"> <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                     						 <i class="glyphicon glyphicon-filter"></i>
+                                  </span> </div>
+              </div>
+              <table class="table table-hover" id="dev-table">
+                <thead>
+                  <tr>
+                    <th class="text-center">Código pedido</th>
+                    <th class="text-center">Proveedor</th>
+                    <th class="text-center">Fecha</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">4.064</td>
+                    <td class="text-center">Global Supply</td>
+                    <td class="text-center">08/05/2017</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">4.065</td>
+                    <td class="text-center">Global Supply</td>
                     <td class="text-center">08/05/2017</td>
                   </tr>
                 </tbody>
@@ -87,36 +109,6 @@
     </div>
   </div>
   <div class="container"> </div>
-  <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-          <h4 class="modal-title custom_align" id="Heading">Aceso a caja vacia</h4>
-        </div>
-        <div class="modal-body">
-          <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> ¿Deseas traer el entablado?</div>
-        </div>
-        <div class="modal-footer "> <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span>&nbsp;Yes</button> <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>&nbsp;No</button>          </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-          <h4 class="modal-title custom_align" id="Heading">Desvincular ubicación</h4>
-        </div>
-        <div class="modal-body">
-          <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Deseas desvincular la ubicacion?</div>
-        </div>
-        <div class="modal-footer "> <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span>&nbsp;Si</button> <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>&nbsp;No</button>          </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
 </body>
 
 </html>

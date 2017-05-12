@@ -4,19 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css">
-  <link type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> </head>
+  <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css"> </head>
 
 <body>
   <nav class="navbar navbar-expand-md bg-faded navbar-light">
     <div class="container"> <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <span class="navbar-toggler-icon"></span>
+    </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item"> <a class="nav-link" href="/OscaArmarios/Home.html">Home <span class="sr-only">(current)</span></a> </li>
-          <li class="nav-item active"> <a class="nav-link" href="/OscaArmarios/EntradaMaterialHome.html">Entrada</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="/OscaArmarios/SalidaMaterialHome.html">Salida</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="/OscaArmarios/EntradaMaterialHome.html">Entrada</a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="/OscaArmarios/SalidaMaterialHome.html">Salida</a> </li>
           <li class="nav-item"> <a class="nav-link" href="/OscaArmarios/ConsultaMaterialHome.html">Consulta</a> </li>
         </ul>
         <form class="form-inline my-2 my-lg-0"> <input class="form-control mr-sm-2" type="text" placeholder="Search"> <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> </form>
@@ -31,7 +34,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="my-3">Seleccionar Pedido</h1>
+          <h1 class="my-3">Seleccionar pedido</h1>
         </div>
       </div>
       <div class="container">
@@ -43,36 +46,114 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
-  </div>
-  <div class="py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <form>
-            <div class="form-group"> <label class="Lead">Código pedido <input type="text" class="form-control"></label> </div>
-            <div class="form-group"> <label class="Lead">Proveedor  <input type="text" class="form-control"></label> </div>
+            <div class="form-group"> <label class="Lead">Código pedido<input type="text" class="form-control"></label> </div>
+            <div class="form-group"> <label class="Lead">Proveedor <input type="text" class="form-control"></label> </div>
             <div class="form-group"> <label class="Lead">Desde
-              <div class="input-group date form_datetime col-md-2" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1"> 
-                <input class="form-control" size="16" type="text" value="" readonly=""> <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-              </div> </label> <label class="Lead">Hasta
-              <div class="input-group date form_datetime col-md-2" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1"> 
-                <input class="form-control" size="16" type="text" value="" readonly=""> <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-              </div> </label> <input type="hidden" id="dtp_input1" value=""><br> </div> <button type="submit" class="btn">Buscar</button>
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-6"> </div>
-              </div>
-            </div>
-          </form>
+                        <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" readonly="">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+             						 </label> <label class="Lead">Hasta
+                            <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                <input class="form-control" size="16" type="text" value="" readonly="">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                            </div>
+                         </label> </div> <a class="btn btn-primary" href="#myModal" data-toggle="modal">Buscar</a> </form>
         </div>
       </div>
     </div>
+    <!--Diagolo muestra todos los articulos -->
+    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="label">Pedidos</h4>
+          </div>
+          <div class="modal-body">
+            <div class="col-md-12">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <div class="pull-right"> <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                     						 <i class="glyphicon glyphicon-filter"></i>
+                                  </span> </div>
+                </div>
+                <table class="table table-hover" id="dev-table">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Código</th>
+                      <th class="text-center">Proveedor</th>
+                      <th class="text-center">Fecha</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="cursor: pointer" class="clickable-row" data-href="/OscaArmarios/EntradaSeleccionArticulo.html">
+                      <td class="text-center">4.064</td>
+                      <td class="text-center">Seaside Steel</td>
+                      <td class="text-center">08/05/2017</td>
+                    </tr>
+                    <tr style="cursor: pointer" class="clickable-row" data-href="/OscaArmarios/EntradaSeleccionArticulo.html">
+                      <td class="text-center">4.065</td>
+                      <td class="text-center">Seaside Steel</td>
+                      <td class="text-center">08/05/2017</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer"> <a class="btn btn-primary" href="#myModal" data-dismiss="modal">Cerrar</a> </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/locales/bootstrap-datetimepicker.es.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+      $('.form_datetime').datetimepicker({
+          //language:  'fr',
+          weekStart: 1,
+          todayBtn:  1,
+          autoclose: 1,
+          todayHighlight: 1,
+          startView: 2,
+          forceParse: 0,
+          showMeridian: 1
+      });
+      $('.form_date').datetimepicker({
+          language:  'fr',
+          weekStart: 1,
+          todayBtn:  1,
+          autoclose: 1,
+          todayHighlight: 1,
+          startView: 2,
+          minView: 2,
+          forceParse: 0
+      });
+      $('.form_time').datetimepicker({
+          language:  'fr',
+          weekStart: 1,
+          todayBtn:  1,
+          autoclose: 1,
+          todayHighlight: 1,
+          startView: 1,
+          minView: 0,
+          maxView: 1,
+          forceParse: 0
+      });
+    </script>
+    <script>
+      jQuery(document).ready(function($) {
+          $(".clickable-row").click(function() {
+              window.document.location = $(this).data("href");
+          });
+      });
+    </script>
   </div>
-  <script type="text/javascript">
-    $(function () {
-                $('#datetimepicker1').datetimepicker();
-            });
-  </script>
 </body>
 
 </html>

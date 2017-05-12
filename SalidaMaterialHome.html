@@ -36,6 +36,7 @@
     $(document).ready(function() {
         $('#datePicker')
             .datepicker({
+                autoclose: true,
                 format: 'mm/dd/yyyy'
             })
             .on('changeDate', function(e) {

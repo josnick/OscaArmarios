@@ -8,20 +8,34 @@
 
 <body>
   <nav class="navbar navbar-expand-md bg-faded navbar-light">
-    <div class="container"> <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item"> <a class="nav-link" href="/OscaArmarios/Home.html">Home <span class="sr-only">(current)</span></a> </li>
-          <li class="nav-item active"> <a class="nav-link" href="/OscaArmarios/EntradaMaterialHome.html">Entrada</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="/OscaArmarios/SalidaMaterialHome.html">Salida</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="/OscaArmarios/ConsultaMaterialHome.html">Consulta</a> </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/OscaArmarios/Home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/OscaArmarios/EntradaMaterialHome.html">Entrada</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/OscaArmarios/SalidaMaterialHome.html">Salida</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/OscaArmarios/ConsultaMaterialHome.html">Consulta</a>
+          </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0"> <input class="form-control mr-sm-2" type="text" placeholder="Search"> <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> </form>
-        <div class="btn-group mx-4"> <button class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown"> Dropdown </button>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a>
-            <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <div class="btn-group mx-4">
+          <button class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown"> Dropdown </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
         </div>
       </div>
     </div>
@@ -35,62 +49,30 @@
         <table class="table table-striped custab">
           <thead>
             <tr>
-              <th>Código pedido</th>
+              <th>Código</th>
               <th>Proveedor</th>
-              <th>Fecha</th>
+              <th>Descripción</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>4009</td>
               <td>Global Supply</td>
-              <td>12-09-2008</td>
+              <td>TAPON 1/2 DIN 910 - 5.8</td>
             </tr>
           </tbody>
-        </table>
-        <div class="panel panel-primary filterable w-100">
-          <div class="panel-heading">
-            <h3 class="panel-title">Artículos</h3>
-            <div class="pull-right"> <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filtrar</button> </div>
-          </div>
-          <table class="table">
-            <thead>
-              <tr class="filters">
-                <th><input type="text" class="form-control" placeholder="Código" disabled=""></th>
-                <th><input type="text" class="form-control" placeholder="Descripción" disabled=""></th>
-                <th><input type="text" class="form-control" placeholder="Cantidad" disabled=""></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>3</td>
-                <td>RACOR</td>
-                <td>5.0</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>RACOR</td>
-                <td>5.0</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>RACOR</td>
-                <td>5.0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12"> </div>
-        </div>
+        </table> <label class="Lead">Cantidad <input type="text" class="form-control"></label> </div>
+      <a class="btn btn-primary" href="#myModal" data-toggle="modal">Buscar</a>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"> </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
   </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
   <!--Diagolo muestra todos los articulos -->
 </body>
 

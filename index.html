@@ -15,7 +15,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/OscaArmarios/Home.html">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="/OscaArmarios/EntradaMaterialHome.html">Entrada</a>
           </li>
           <li class="nav-item">
@@ -40,118 +40,7 @@
       </div>
     </div>
   </nav>
-  <div class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="my-3">Búsqueda de Artículo</h1>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12"> </div>
-        </div>
-      </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <form>
-            <div class="form-group"> <label class="Lead">Código<input type="text" class="form-control"></label> </div>
-            <div class="form-group"> <label class="Lead">Alias <input type="text" class="form-control"></label> </div>
-            <div class="form-group"> <label class="Lead">Descripción <input type="text" class="form-control"></label> </div>
-            <a class="btn btn-primary" href="#myModal" data-toggle="modal">Buscar</a>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
   <!--Diagolo muestra todos los articulos -->
-  <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="label">Selección Articulo</h4>
-        </div>
-        <div class="modal-body">
-          <div class="col-md-12">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <div class="pull-right"> <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
-                                                 <i class="glyphicon glyphicon-filter"></i>
-                                      </span> </div>
-              </div>
-              <table class="table table-hover" id="dev-table">
-                <thead>
-                  <tr>
-                    <th class="text-left">Código</th>
-                    <th class="text-left">Descripción</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="cursor: pointer" class="clickable-row" data-dismiss="modal" data-target="#vendedor" data-toggle="modal">
-                    <td class="text-left">4.064</td>
-                    <td class="text-left">ACCESORIO TM-4DSX3HG4</td>
-                  </tr>
-                  <tr style="cursor: pointer" class="clickable-row" data-toggle="modal" data-target="#vendedor" data-dismiss="modal">
-                    <td class="text-left">4.064</td>
-                    <td class="text-left">ACCESORIO TM-4DSX3HG4</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a class="btn btn-primary" href="#myModal" data-dismiss="modal">Cerrar</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" aria-hidden="true" id="vendedor" role="dialog" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="label">Selección Vendedor</h4>
-        </div>
-        <div class="modal-body">
-          <div class="col-md-12">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <div class="pull-right"> <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
-                                                 <i class="glyphicon glyphicon-filter"></i>
-                                      </span> </div>
-              </div>
-              <table class="table table-hover" id="dev-table">
-                <thead>
-                  <tr>
-                    <th class="text-left">Id Vendedor</th>
-                    <th class="text-left">Nombre</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="cursor: pointer" class="clickable-row" data-href="/OsaArmarios/EntradaSelecionCantidadArtiulo">
-                    <td class="text-left">GECCO</td>
-                    <td class="text-left">Geco Steel</td>
-                  </tr>
-                  <tr style="cursor: pointer" class="clickable-row" data-href="/OsaArmarios/EntradaSeleccionCantidadArticulo">
-                    <td class="text-left">ECD</td>
-                    <td class="text-left">ECD Rebate Supplier</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a class="btn btn-primary" href="#vendedor" data-dismiss="modal">Cerrar</a>
-        </div>
-      </div>
-    </div>
-  </div>
   <script>
     jQuery(document).ready(function($) {
         $(".clickable-row").click(function() {

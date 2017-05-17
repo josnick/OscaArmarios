@@ -52,15 +52,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="my-3">SELECCIONAR ARTÍCULO DE PEDIDO</h1>
-          <div class="row w-50">
-            <div class="col-md-6">
-              <a class="btn btn-primary my-3 mx-0 btn-block text-center btn-lg" href="#myModal" data-toggle="">Introducir Peso</a>
-            </div>
-            <div class="col-md-6">
-              <h4 class="my-2 bg-warning px-2 py-3">Peso total:0,000 Kg.</h4>
-            </div>
-          </div>
+          <h1 class="my-3">Confirmar Entrada</h1>
         </div>
         <table class="table table-striped custab">
           <thead>
@@ -80,56 +72,20 @@
             </tr>
           </tbody>
         </table>
-        <h2 class="my-4"> Ubicación</h2>
-        <div ng-controller="MyCtrl" class="test-container w-100" ng-style="{'width': rootWidth+'px'; }">
-          <!-- tabla informacion articulos -->
-          <scrollable-table watch="visibleProjects" resizable="">
-            <table class="table table-striped table-bordered w-100">
-              <thead>
-                <tr>
-                  <th sortable-header="" col="code" title="The code for the unit">Lanzadera</th>
-                  <th sortable-header="" col="code" title="The code for the unit">Entablado</th>
-                  <th sortable-header="" col="cost">X</th>
-                  <th col="conditionRating" sortable-header="">Y</th>
-                  <th col="extent" ng-show="toggleColumn">Cantidad</th>
-                  <th sortable-header="" col="planYear" comparator-fn="comparator">Peso</th>
-                  <th sortable-header="" col="planYear" comparator-fn="comparator" class="text-right">Seleccionar</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr ng-repeat="response in visibleProjects" row-id="{{ response.facility }}" ng-class="{info: selected == response.facility}">
-                  <td>{{ response.facility }}</td>
-                  <td>{{ response.code }}</td>
-                  <td>{{ response.cost }}</td>
-                  <td class="cr">{{ response.conditionRating }}</td>
-                  <td ng-show="toggleColumn">{{ response.extent }}</td>
-                  <td>{{ response.planYear }}</td>
-                  <td class="text-right">
-                    <a class="btn btn-primary btn-lg" href="#myModal" data-toggle="modal">Selecionar</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </scrollable-table>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12"> </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-6">
-              <a class="btn btn-primary my-3 mx-0 text-left btn-lg" href="#myModal" data-toggle="modal">Sugerir Ubicación</a>
-            </div>
-            <div class="col-md-6">
-              <a class="btn btn-primary my-3 mx-0 text-left btn-lg" href="#myModal" data-toggle="modal">Nueva Ubicación</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6"> </div>
+        <table class="table table-striped custab w-25 py-1">
+          <thead>
+            <tr>
+              <th class="w-25">Lanzadera</th>
+              <th class="w-25">Entablado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

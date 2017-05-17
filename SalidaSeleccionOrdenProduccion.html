@@ -3,42 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    <style>body {
-      background-color: #bdc3c7;
-    }
-
-    table-fixed {
-      width: 100%;
-      background-color: #f3f3f3;
-      tbody {
-        height: 200px;
-        overflow-y: auto;
-        width: 100%;
-      }
-      thead,
-      tbody,
-      tr,
-      td,
-      th {
-        display: block;
-      }
-      tbody {
-        td {
-          float: left;
-        }
-      }
-      thead {
-        tr {
-          th {
-            float: left;
-            background-color: #f39c12;
-            border-color: #e67e22;
-          }
-        }
-      }
-    }
-  </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css"> </head>
 
@@ -108,19 +72,41 @@
             </tr>
           </tbody>
         </table>
-        <table class="table table-fixed">
-          <thead>
+        <table class="table table-striped my-5" style="width:100%;overflow-y:scroll;height:200px;display:block;">
+          <thead class="">
             <tr>
-              <th class="text-right">Lanzadera</th>
-              <th class="text-right">Entablado</th>
-              <th class="text-right">X</th>
-              <th class="text-right">Y</th>
-              <th class="text-right">Cantidad</th>
-              <th class="text-right">Peso</th>
-              <th class="text-right">Selecionar</th>
+              <th class="text-right w-50">Lanzadera</th>
+              <th class="text-right w-25">Entablado</th>
+              <th class="text-right w-25">X</th>
+              <th class="text-right w-25">Y</th>
+              <th class="text-right w-50">Cantidad</th>
+              <th class="text-right w-50">Peso</th>
+              <th class="text-right w-50">Selecionar</th>
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td class="text-right">4</td>
+              <td class="text-right">2</td>
+              <td class="text-right">13</td>
+              <td class="text-right">3</td>
+              <td class="text-right">200</td>
+              <td class="text-right">24,00</td>
+              <td class="text-right">
+                <a class="btn btn-primary" href="#myModal" data-toggle="modal">Selecionar</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-right">4</td>
+              <td class="text-right">2</td>
+              <td class="text-right">13</td>
+              <td class="text-right">3</td>
+              <td class="text-right">200</td>
+              <td class="text-right">24,00</td>
+              <td class="text-right">
+                <a class="btn btn-primary" href="#myModal" data-toggle="modal">Selecionar</a>
+              </td>
+            </tr>
             <tr>
               <td class="text-right">4</td>
               <td class="text-right">2</td>

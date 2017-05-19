@@ -2,26 +2,48 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Seleccion ubiacion</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css"> </head>
+  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css">
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="http://code.angularjs.org/1.3.9/angular.js"></script>
+  <script type="text/javascript" src="../angular-scrollable-table.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
 
-<body>
+<body ng-app="myApp" ng-init="rootWidth=100%;">
   <nav class="navbar navbar-expand-md bg-faded navbar-light">
-    <div class="container"> <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item"> <a class="nav-link" href="/OscaArmarios/Home.html">Home <span class="sr-only">(current)</span></a> </li>
-          <li class="nav-item active"> <a class="nav-link" href="/OscaArmarios/EntradaMaterialHome.html">Entrada</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="/OscaArmarios/SalidaMaterialHome.html">Salida</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="/OscaArmarios/ConsultaMaterialHome.html">Consulta</a> </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/OscaArmarios/Home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/OscaArmarios/EntradaMaterialHome.html">Entrada</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/OscaArmarios/SalidaMaterialHome.html">Salida</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/OscaArmarios/ConsultaMaterialHome.html">Consulta</a>
+          </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0"> <input class="form-control mr-sm-2" type="text" placeholder="Search"> <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> </form>
-        <div class="btn-group mx-4"> <button class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown"> Dropdown </button>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a>
-            <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <div class="btn-group mx-4">
+          <button class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown"> Dropdown </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
         </div>
       </div>
     </div>
@@ -30,68 +52,60 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="my-3">Búsqueda de Artículo</h1>
+          <h1 class="my-3">Confirmar Entrada</h1>
         </div>
+        <table class="table table-striped custab">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Proveedor</th>
+              <th>Descripción</th>
+              <th class="text-center bg-primary">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>00.000.1671</td>
+              <td></td>
+              <td>TAPON 1/2 DIN 910 - 5.8</td>
+              <td class="text-center bg-success">5</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-striped custab w-25 py-1">
+          <thead>
+            <tr>
+              <th class="w-25">Lanzadera</th>
+              <th class="w-25">Entablado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12"> </div>
-        </div>
-      </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
-  </div>
-  <div class="py-5">
-    <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <form>
-            <div class="form-group"> <label class="Lead">Código<input type="text" class="form-control"></label> </div>
-            <div class="form-group"> <label class="Lead">Alias <input type="text" class="form-control"></label> </div>
-            <div class="form-group"> <label class="Lead">Descripción <input type="text" class="form-control"></label> </div> <a class="btn btn-primary" href="#myModal" data-toggle="modal">Buscar</a> </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--Diagolo muestra todos los articulos -->
-  <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="label">Selección Articulo</h4>
-        </div>
-        <div class="modal-body">
-          <div class="col-md-12">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <div class="pull-right"> <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
-                     						 <i class="glyphicon glyphicon-filter"></i>
-                                  </span> </div>
-              </div>
-              <table class="table table-hover" id="dev-table">
-                <thead>
-                  <tr>
-                    <th class="text-left">Código</th>
-                    <th class="text-left">Descripción</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="text-left">4.064</td>
-                    <td class="text-left">ACCESORIO TM-4DSX3HG4</td>
-                  </tr>
-                  <tr>
-                    <td class="text-left">4.064</td>
-                    <td class="text-left">ACCESORIO TM-4DSX3HG4</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+        <!--leyenda eje y-->
+        <div class="col-md-1"> </div>
+        <!--ontenido entablado-->
+        <div class="col-md-11">
+          <div id="entablado" class="container-fluid w-100">
+            <script>
+              var text = "<div class=\"row\">\n <div class=\"btn-group\">";
+                      var i;
+                      for (i = 1; i <= (28*4); i++) {
+
+                        text += "<button type=\"button\" class=\"btn btn-default col-md-4 btn-responsive \" style=\"border:1px solid; border-radius: 0; min-height:40px; min-width:40px; max-width:60px;\"></button>";
+                        if(i%28==0) text += "</div></div><div class=\"row\">\n <div class=\"btn-group\">";
+                      }
+                      text += "</div></div>";
+                      document.getElementById("entablado").innerHTML = text;
+            </script>
           </div>
         </div>
-        <div class="modal-footer"> <a class="btn btn-primary" href="#myModal" data-dismiss="modal">Cerrar</a> </div>
       </div>
     </div>
   </div>

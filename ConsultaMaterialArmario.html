@@ -88,7 +88,7 @@
                   <td>{{ response.cost }}</td>
                   <td>{{ response.facility }}</td>
                   <td class="text-right">
-                    <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"> <span class="glyphicon glyphicon-pencil">
+                    <button class="btn btn-primary btn-xs" data-title="edit" data-toggle="modal" data-target="#edit"> <span class="glyphicon glyphicon-pencil">
                            </span> </button>
                   </td>
                   <td class="text-right">
@@ -148,6 +148,24 @@
             window.document.location = $(this).data("href");
         });
     });
+  </script>
+  <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+          $("#mytable #checkall").click(function () {
+              if ($("#mytable #checkall").is(':checked')) {
+                  $("#mytable input[type=checkbox]").each(function () {
+                      $(this).prop("checked", true);
+                  });
+
+              } else {
+                  $("#mytable input[type=checkbox]").each(function () {
+                      $(this).prop("checked", false);
+                  });
+              }
+          });
+          $("[data-toggle=tooltip]").tooltip();
+      });
   </script>
 </body>
 

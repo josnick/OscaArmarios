@@ -85,6 +85,18 @@
                   <td>{{ response.facility }}</td>
                   <td class="w-75">{{ response.code }}</td>
                   <td>{{ response.cost }}</td>
+                  <td>{{ response.cost }}</td>
+                  <td>{{ response.facility }}</td>
+                  <td class="text-right">
+                    <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit">
+                      <img src="http://www.iconsdb.com/icons/preview/black/arrow-141-xxl.png" width="10" height="10"> <span class="glyphicon glyphicon-pencil">
+                           </span> </button>
+                  </td>
+                  <td class="text-right">
+                    <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete">
+                      <img src="http://iconshow.me/media/images/Mixed/line-icon/png/512/trash-512.png" width="10" height="10"> <span class="glyphicon glyphicon-trash">
+                          </span> </button>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -92,6 +104,44 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+          <h4 class="modal-title custom_align" id="Heading">Aceso a caja vacia</h4>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> ¿Deseas traer el entablado?</div>
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span> Si</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+          <h4 class="modal-title custom_align" id="Heading">Eliminar caja vacia</h4>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Deseas eliminar la caja vacia?</div>
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span> Si</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
   </div>
   <script type="text/javascript" src="js/table/compareTable.js"></script>
   <script>

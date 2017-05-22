@@ -3,38 +3,54 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Angular-scrollable-table directive demo</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../scrollable-table.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="http://code.angularjs.org/1.3.9/angular.js"></script>
+  <script type="text/javascript" src="../angular-scrollable-table.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body ng-app="myApp" ng-init="rootWidth=100%;">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Seleccion ubiacion</title>
   <link href="css/scrollable-table.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css">
   <script type="text/javascript" src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
   <script type="text/javascript" src="http://code.angularjs.org/1.3.9/angular.js"></script>
   <script type="text/javascript" src="js/angular-scrollable-table.js"></script>
-</head>
-
-<body>
   <nav class="navbar navbar-expand-md bg-faded navbar-light">
     <div class="container">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/OscaArmarios/Home.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/OscaArmarios/Home.html">
+              <h2>Home</h2> <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/OscaArmarios/EntradaMaterialHome.html">Entrada</a>
+            <a class="nav-link" href="/OscaArmarios/EntradaMaterialHome.html">
+              <h2>Entrada</h2>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/OscaArmarios/SalidaMaterialHome.html">Salida</a>
+            <a class="nav-link" href="/OscaArmarios/SalidaMaterialHome.html">
+              <h2>Salida</h2>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/OscaArmarios/ConsultaMaterialHome.html">Consulta</a>
+            <a class="nav-link" href="/OscaArmarios/ConsultaMaterialHome.html">
+              <h2>Consulta</h2>
+            </a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-        <div class="btn-group mx-4">
+        <div class="btn-group mx-4  my-2 my-lg-0">
           <button class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown"> Dropdown </button>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Action</a>
@@ -48,16 +64,43 @@
   <div class="py-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-12"> </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12"> </div>
+        <h2 class="my-4"> Eliminar cajas vacias</h2>
+        <div ng-controller="MyCtrl" class="test-container w-100" ng-style="{'width': rootWidth+'px'; }">
+          <!-- tabla informacion articulos -->
+          <scrollable-table watch="visibleProjects" resizable="">
+            <table class="table table-striped table-bordered w-100">
+              <thead>
+                <tr>
+                  <th sortable-header="" col="code" title="The code for the unit">Lanzadera</th>
+                  <th sortable-header="" col="code" title="The code for the unit">Entablado</th>
+                  <th sortable-header="" col="code" title="The code for the unit">X</th>
+                  <th sortable-header="" col="code" title="The code for the unit">Y</th>
+                  <th col="code" sortable-header="" title="The code for the unit">Tipo caja</th>
+                  <th sortable-header="" col="code" title="The code for the unit">Eliminar</th>
+                  <th sortable-header="" col="code" class="w-75" title="The code for the unit">Acceder</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="response in visibleProjects" row-id="{{ response.facility }}" ng-class="{info: selected == response.facility}">
+                  <td>{{ response.facility }}</td>
+                  <td class="w-75">{{ response.code }}</td>
+                  <td>{{ response.cost }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </scrollable-table>
+        </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
   </div>
+  <script type="text/javascript" src="js/table/compareTable.js"></script>
+  <script>
+    jQuery(document).ready(function($) {
+        $(".clickable-row").click(function() {
+            window.document.location = $(this).data("href");
+        });
+    });
+  </script>
 </body>
 
 </html>

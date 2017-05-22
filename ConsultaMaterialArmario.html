@@ -11,7 +11,20 @@
   <script type="text/javascript" src="js/angular-scrollable-table.js"></script>
 </head>
 
-<body ng-app="myApp" ng-init="rootWidth=100%;">
+<body>&lt;%-- Created by IntelliJ IDEA. User: Portátil1 Date: 08/05/2017 Time: 14:10 To change this template use File | Settings | File Templates. --%&gt; &lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/table/compareTable.js"></script>
+  <script>
+    jQuery(document).ready(function($) {
+        $(".clickable-row").click(function() {
+            window.document.location = $(this).data("href");
+        });
+    });
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css">
   <nav class="navbar navbar-expand-md bg-faded navbar-light">
     <div class="container">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
@@ -49,50 +62,37 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="my-3">Ultimos movimientos en esta bandeja (00.000.0013)</h1>
+          <h1 class="my-3">Orden de producción</h1>
         </div>
         <table class="table table-striped custab">
           <thead>
             <tr>
-              <th>Lanzadera</th>
-              <th>Entablado</th>
+              <th>Código</th>
+              <th>Proveedor</th>
+              <th>Descripción</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>3</td>
-              <td>1</td>
+              <td>00.000.1671</td>
+              <td>Gecco Steel</td>
+              <td>TAPON 1/2 DIN 910 - 5.8</td>
             </tr>
           </tbody>
         </table>
+        <h2 class="my-4"> Ubicación</h2>
         <div ng-controller="MyCtrl" class="test-container w-100" ng-style="{'width': rootWidth+'px'; }">
           <!-- tabla informacion articulos -->
           <scrollable-table watch="visibleProjects" resizable="">
-            <div class="row w-100 mx-0">
-              <div class="col-md-3">
-                <a class="btn btn-primary my-3 mx-0 text-left btn-lg" data-toggle="modal">Último mes</a>
-              </div>
-              <div class="col-md-3">
-                <a class="btn btn-primary my-3 mx-0 text-left btn-lg" data-toggle="modal">Últimos 3 meses</a>
-              </div>
-              <div class="col-md-3">
-                <a class="btn btn-primary my-3 mx-0 text-left btn-lg" data-toggle="modal">Último año</a>
-              </div>
-              <div class="col-md-3">
-                <a class="btn btn-primary my-3 mx-0 text-left btn-lg" data-toggle="modal">Todos</a>
-              </div>
-            </div>
             <table class="table table-striped table-bordered w-100">
               <thead>
                 <tr>
-                  <th sortable-header="" col="planYear" title="The code for the unit">Fecha</th>
-                  <th sortable-header="" col="code" title="The code for the unit">X</th>
-                  <th sortable-header="" col="cost">Y</th>
-                  <th sortable-header="" col="conditionRating">Usuario</th>
-                  <th col="extent" ng-show="toggleColumn">Tipo</th>
-                  <th col="code" comparator-fn="comparator" sortable-header="">Cantidad</th>
-                  <th sortable-header="" col="code" comparator-fn="comparator" class="text-right">Código</th>
-                  <th sortable-header="" col="code" comparator-fn="comparator" class="text-right">Alias</th>
+                  <th sortable-header="" col="code" title="The code for the unit">Lanzadera</th>
+                  <th sortable-header="" col="code" title="The code for the unit">Entablado</th>
+                  <th col="cost" sortable-header="">X</th>
+                  <th sortable-header="" col="conditionRating">Y</th>
+                  <th col="extent" ng-show="toggleColumn">Cantidad</th>
+                  <th col="planYear" class="text-right" comparator-fn="comparator" sortable-header="">Peso</th>
                 </tr>
               </thead>
               <tbody>
@@ -103,8 +103,9 @@
                   <td class="cr">{{ response.conditionRating }}</td>
                   <td ng-show="toggleColumn">{{ response.extent }}</td>
                   <td>{{ response.planYear }}</td>
-                  <td>{{ response.planYear }}</td>
-                  <td>{{ response.facility }}</td>
+                  <td class="text-right">
+                    <a class="btn btn-primary" href="/OscaArmarios/ConsultaEntablado.html" data-toggle="modal">Mostrar</a>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -117,28 +118,10 @@
         <div class="col-md-12"> </div>
       </div>
       <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-6">
-              <a class="btn btn-primary my-3 mx-0 text-left btn-lg" href="/OscaArmarios/EntradaSeleccionUbicacionFinal.html" data-toggle="modal">Sugerir Ubicación</a>
-            </div>
-            <div class="col-md-6">
-              <a class="btn btn-primary my-3 mx-0 text-left btn-lg" href="/OscaArmarios/EntradaSeleccionUbicacionFinal.html" data-toggle="modal">Nueva Ubicación</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6"> </div>
+        <div class="col-md-12"> </div>
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="js/table/compareTable.js"></script>
-  <script>
-    jQuery(document).ready(function($) {
-        $(".clickable-row").click(function() {
-            window.document.location = $(this).data("href");
-        });
-    });
-  </script>
 </body>
 
 </html>
